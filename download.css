@@ -1,0 +1,216 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding-top: 80px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 123, 255, 0.8);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Dark Mode Navbar */
+body.dark-mode .navbar {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .nav-links a {
+    color: #f1f1f1;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Download Section */
+.download-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.download-section h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.download-section p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* Dark Mode Download Section */
+body.dark-mode .download-section {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+/* Search Input */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#searchInput:focus {
+    border-color: #007bff;
+}
+
+/* Dark Mode Search Input */
+body.dark-mode #searchInput {
+    background-color: #333;
+    border-color: #444;
+    color: #f1f1f1;
+}
+
+#searchInput:focus {
+    border-color: #ffcc00;
+}
+
+/* File List Grid */
+.file-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.file {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.file:hover {
+    transform: translateY(-10px);
+}
+
+.file img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.file p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Dark Mode File List */
+body.dark-mode .file {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+body.dark-mode .file:hover {
+    background-color: #444;
+}
+
+body.dark-mode .file p {
+    color: #f1f1f1;
+}
+
+/* Button */
+.btn {
+    padding: 10px 20px;
+    background: #28a745;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Buttons */
+body.dark-mode .btn {
+    background-color: #007bff;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Research File</title>
+    <link rel="stylesheet" href="upload.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Research Hub</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+        <h1>Upload Your Research File</h1>
+        <p>Share your research with the community.</p>
+
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="fileUpload" name="file" accept=".pdf,.docx,.txt" required>
+            <button type="button" class="btn" onclick="uploadFile()">Upload</button>
+        </form>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <p id="uploadStatus"></p>
+    </section>
+
+    <script src="upload.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css"> <!-- Link to login CSS -->
+    <link rel="stylesheet" href="signup.css"> <!-- Link to signup CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocShare - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Research Hub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#" id="loginBtn">Login</a></li>
+                <li><a href="#" id="signupBtn">Sign Up</a></li>
+                <li><button id="darkModeToggle">🌙</button></li>
+                <li>
+                    <select id="languageSelect" onchange="changeLanguage()">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover & Share Research Effortlessly</h1>
+            <p>Upload your research papers and access thousands of others for free.</p>
+            <a href="upload.html" class="btn">Upload Research</a>
+            <a href="download.html" class="btn">Explore Papers</a>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Search research papers..." onkeyup="searchFunction()">
+        <button class="btn">Search</button>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="feature-container">
+            <div class="feature-card">🔍 Advanced Search</div>
+            <div class="feature-card">📂 Secure Upload</div>
+            <div class="feature-card">🌎 Global Access</div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">"Great platform for research sharing!" - Dr. Smith</div>
+            <div class="testimonial">"Very easy to use and access!" - Jane Doe</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DocShare. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login/Signup Modal Handling Script -->
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const signupBtn = document.getElementById('signupBtn');
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+        const closeModal = document.querySelectorAll('.close-modal');
+
+        loginBtn.addEventListener('click', () => {
+            loginModal.style.display = 'block';
+        });
+
+        signupBtn.addEventListener('click', () => {
+            signupModal.style.display = 'block';
+        });
+
+        closeModal.forEach((span) => {
+            span.addEventListener('click', () => {
+                loginModal.style.display = 'none';
+                signupModal.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal || e.target === signupModal) {
+                loginModal.style.display = 'none';
+                signupModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

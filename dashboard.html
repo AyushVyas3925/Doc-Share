@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Research Hub</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="download.html">Download</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+        <h1>Welcome, <span id="username">User</span></h1>
+        <p>Your Research Contributions</p>
+
+        <!-- Upload History -->
+        <div class="upload-history">
+            <h2>Your Uploaded Files</h2>
+            <div id="fileGrid" class="file-grid">
+                <p>Loading...</p> <!-- Will be replaced by real files -->
+            </div>
+        </div>
+
+        <!-- Account Settings -->
+        <div class="account-settings">
+            <h2>Account Settings</h2>
+            <button class="btn" onclick="openModal('updateModal')">Update Account</button>
+        </div>
+    </section>
+
+    <!-- Update Account Modal -->
+    <div id="updateModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('updateModal')">&times;</span>
+            <h2>Update Your Account</h2>
+            <form id="updateForm">
+                <input type="text" id="updateUsername" placeholder="New Username">
+                <input type="email" id="updateEmail" placeholder="New Email">
+                <button type="submit" class="btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

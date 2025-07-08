@@ -1,0 +1,196 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding-top: 80px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 123, 255, 0.8);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Dark Mode Navbar */
+body.dark-mode .navbar {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .nav-links a {
+    color: #f1f1f1;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Upload Section */
+.upload-section {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.upload-section h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.upload-section p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Dark Mode Upload Section */
+body.dark-mode .upload-section {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+/* File Input */
+#fileUpload {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#fileUpload:focus {
+    border-color: #007bff;
+}
+
+/* Dark Mode File Input */
+body.dark-mode #fileUpload {
+    background-color: #333;
+    border-color: #444;
+    color: #f1f1f1;
+}
+
+#fileUpload:focus {
+    border-color: #ffcc00;
+}
+
+/* Button */
+.btn {
+    padding: 10px 20px;
+    background: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Buttons */
+body.dark-mode .btn {
+    background-color: #007bff;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background: #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 10px;
+    background: #28a745;
+    transition: width 0.5s ease-in-out;
+}
+
+#uploadStatus {
+    margin-top: 10px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Dark Mode Progress Bar */
+body.dark-mode .progress-container {
+    background-color: #444;
+}
+
+body.dark-mode .progress-bar {
+    background-color: #28a745;
+}

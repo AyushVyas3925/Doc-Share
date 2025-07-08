@@ -1,0 +1,253 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    text-align: center;
+    padding-top: 80px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 123, 255, 0.8);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    margin-top: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1, h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background: #28a745;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* File List and Search Bar */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.file {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.file:hover {
+    transform: translateY(-3px);
+}
+
+.file p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Update Form */
+#updateForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#updateForm input {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#updateForm button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#updateForm button:hover {
+    background-color: #218838;
+}
+
+/* Dark Mode Enhancements */
+body.dark-mode section,
+body.dark-mode .modal-content {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+body.dark-mode .file {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+}
+
+body.dark-mode .btn {
+    background-color: #007bff;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

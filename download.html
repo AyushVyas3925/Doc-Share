@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Research Files</title>
+    <link rel="stylesheet" href="download.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Research Hub</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <h1>Download Research Files</h1>
+        <p>Browse and download the latest research papers.</p>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchInput" placeholder="Search for a file..." onkeyup="searchFiles()">
+
+        <!-- Research Files List -->
+        <div class="file-list" id="fileList">
+            <!-- Files will be loaded dynamically -->
+        </div>
+    </section>
+
+    <script src="download.js"></script>
+</body>
+</html>

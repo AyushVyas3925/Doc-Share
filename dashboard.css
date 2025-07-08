@@ -1,0 +1,240 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding-top: 80px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.dashboard-section h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.dashboard-section p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Upload History - Grid Style */
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.file-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 200px;
+}
+
+.file-card:hover {
+    transform: scale(1.05);
+}
+
+.file-preview {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.download-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+    background: #0056b3;
+}
+
+/* Account Settings */
+.account-settings {
+    margin-top: 30px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dark Mode Enhancements */
+body.dark-mode .navbar,
+body.dark-mode .dashboard-section,
+body.dark-mode .modal-content {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+body.dark-mode .file-card {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+}
+
+body.dark-mode .btn {
+    background-color: #007bff;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

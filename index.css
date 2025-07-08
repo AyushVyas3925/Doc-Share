@@ -1,0 +1,184 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Navigation Bar */
+header {
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://static4.depositphotos.com/1001877/505/i/450/depositphotos_5057916-stock-photo-symbol-of-medicine-abstract-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.feature-card:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Dark Mode Enhancements */
+body.dark-mode .navbar, 
+body.dark-mode .modal-content {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+body.dark-mode .btn {
+    background-color: #007bff;
+}
+
+body.dark-mode .feature-card {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
